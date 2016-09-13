@@ -1,0 +1,3 @@
+module ActiveAdminBbs
+  # Your code goes here...
+end
