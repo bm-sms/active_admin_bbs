@@ -23,7 +23,7 @@ module ActiveAdminBbs
             column do
               panel I18n.t('active_admin_bbs.dashboard.chart.comment_count') do
                 div do
-                  span Bbs::Topic.count
+                  span Bbs::Comment.count
                 end
               end
             end
