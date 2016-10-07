@@ -16,6 +16,8 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'rails', '~> 5.0.0', '>= 5.0.0.1'
   s.add_dependency 'bbs'
+  s.add_dependency 'chartkick'
+  s.add_dependency 'groupdate'
   s.add_runtime_dependency 'activeadmin'
   s.add_runtime_dependency 'inherited_resources'
 
