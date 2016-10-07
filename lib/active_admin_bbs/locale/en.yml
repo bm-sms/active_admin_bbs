@@ -1,0 +1,11 @@
+en:
+  active_admin_bbs:
+    dashboard:
+      chart:
+        title: chart
+        user_count: total users
+        topic_count: total topics
+        comment_count: total comments
+        user_count_by_day: cumulative users by day
+        topic_count_by_day: cumulative topics by day
+        comment_count_by_day: cumulative comments by day

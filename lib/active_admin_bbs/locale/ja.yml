@@ -1,0 +1,11 @@
+ja:
+  active_admin_bbs:
+    dashboard:
+      chart:
+        title: チャート
+        user_count: ユーザ総数
+        topic_count: トピック総数
+        comment_count: コメント総数
+        user_count_by_day: ユーザ数(日累計)
+        topic_count_by_day: トピック数(日累計)
+        comment_count_by_day: コメント数(日累計)
