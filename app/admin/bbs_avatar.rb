@@ -2,7 +2,7 @@ ActiveAdmin.register Bbs::Avatar do
   index do
     column 'ID', :id
     column 'avatar', :avatar do |o|
-      image_tag(o.avatar.url(:medium))
+      image_tag(o.image.url(:medium))
     end
 
     actions
@@ -11,19 +11,19 @@ ActiveAdmin.register Bbs::Avatar do
   show do |r|
     attributes_table do
       row :avatar do
-        image_tag(r.avatar.url(:medium))
+        image_tag(r.image.url(:medium))
       end
 
       row :url do
-        r.avatar.url
+        r.image.url
       end
 
       row :url_medium do
-        r.avatar.url(:medium)
+        r.image.url(:medium)
       end
 
       row :url_thumb do
-        r.avatar.url(:thumb)
+        r.image.url(:thumb)
       end
 
       active_admin_comments
@@ -33,7 +33,7 @@ ActiveAdmin.register Bbs::Avatar do
   form multipart: true, as: 'bbs_avatar' do |f|
     f.semantic_errors
     f.inputs Bbs::Avatar do
-      f.input :avatar, as: :file
+      f.input :image, as: :file
       f.actions
     end
   end
@@ -42,7 +42,7 @@ ActiveAdmin.register Bbs::Avatar do
     private
 
     def permitted_params
-      params.permit bbs_avatar: [:avatar]
+      params.permit bbs_avatar: [:image]
     end
   end
 end
