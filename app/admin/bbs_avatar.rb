@@ -1,4 +1,4 @@
-ActiveAdmin.register Bbs::Avatar do
+ActiveAdmin.register Bbs.config.avatar_class do
   index do
     column 'ID', :id
     column 'avatar', :avatar do |o|
