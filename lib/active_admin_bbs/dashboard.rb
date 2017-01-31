@@ -7,7 +7,7 @@ module ActiveAdminBbs
             column do
               panel I18n.t('active_admin_bbs.dashboard.chart.user_count') do
                 div do
-                  span Bbs::User.count
+                  span Bbs.config.user_class.count
                 end
               end
             end
@@ -32,7 +32,7 @@ module ActiveAdminBbs
           columns do
             column do
               panel I18n.t('active_admin_bbs.dashboard.chart.user_count_by_day') do
-                line_chart ActiveAdminBbs::Dashboard::cumulate(Bbs::User.group_by_day(:created_at).count)
+                line_chart ActiveAdminBbs::Dashboard::cumulate(Bbs.config.user_class.group_by_day(:created_at).count)
               end
             end
           end

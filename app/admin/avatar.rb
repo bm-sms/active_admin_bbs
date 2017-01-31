@@ -30,9 +30,9 @@ ActiveAdmin.register Bbs.config.avatar_class do
     end
   end
 
-  form multipart: true, as: 'bbs_avatar' do |f|
+  form multipart: true, as: 'avatar' do |f|
     f.semantic_errors
-    f.inputs Bbs::Avatar do
+    f.inputs Bbs.config.avatar_class_name do
       f.input :image, as: :file
       f.actions
     end
@@ -42,7 +42,7 @@ ActiveAdmin.register Bbs.config.avatar_class do
     private
 
     def permitted_params
-      params.permit bbs_avatar: [:image]
+      params.permit avatar: [:image]
     end
   end
 end
