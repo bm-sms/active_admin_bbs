@@ -32,7 +32,7 @@ ActiveAdmin.register Avatar do
 
   form multipart: true, as: 'avatar' do |f|
     f.semantic_errors
-    f.inputs Bbs.config.avatar_class_name do
+    f.inputs Avatar do
       f.input :image, as: :file
       f.actions
     end
